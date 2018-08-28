@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+
+use Illuminate\Routing\Router;
+
+Router::get('/', function () {
     return view('welcome');
 });
+
+Router::get('call-testcontroller','TestController@index');
