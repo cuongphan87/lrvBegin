@@ -45,12 +45,87 @@ Router::get('/json', function() {
     return response()->json(['name' => 'cuong', 'tuoi' => '33']);
 });
 
-    Router::get('/test', function(){
-        return view('demo2');
-    });
-    
-        Router::get('/test2', function(){
-            return view('demo');
-        });
-            
+// Router::get('/test', function(){
+//     return view('demo',['name2'=>'Cuong']);
+// });
+
+Router::get('/test2', function(){
+    return view('demo');
+});
+
+Router::get('aa','TestController@index');
+
+Router::get('/bbb', function() {
+    return redirect()->action('TestController@index');
+});
+
+Router::get('insert','StudyInsertController@insertForm');
+
+Router::post('create','StudyInsertController@insert');
+
+Router::get('view_list','StudySelectController@select');
+
+Router::get('view_list_data','StudyUpdateController@index');
+
+Router::get('edit/{id}','StudyUpdateController@selectId');
+
+Router::post('edit/{id}','StudyUpdateController@updateId');
+
+Router::get('delete/{id}','StudyDeleteController@deleteId');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
          

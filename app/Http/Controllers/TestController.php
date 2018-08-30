@@ -16,6 +16,10 @@ class TestController extends Controller
 //         $this->middleware('Second');
 //     }
     
+    public function index() {
+        echo "This is redirection ";
+    }
+    
     public function showPath(Request $request){
         $uri = $request->path();
         echo '<br>URI: '.$uri;
